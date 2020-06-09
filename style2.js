@@ -105,14 +105,16 @@ async function currentWeather (key, dataLat, dataLon){
     var fetchJsonData = fetchData.json()
     fetchJsonData.then(function(data){
         var dataUvi = data.current.uvi
+        var dataTemp = data.current.temp
+        var dataHum = data.current.humidity
         console.log(data)
         console.log(data.list)
-        showCurrent(dataUvi)
+        showCurrent(dataUvi, dataTemp, dataHum)
         
     })}
 
     
-     function showCurrent (dataUvi){
+     function showCurrent (dataUvi, dataTemp, dataHum){
         
         var htmlstring1 = "";
         var openPara1 = document.getElementById("name")
@@ -128,5 +130,12 @@ async function currentWeather (key, dataLat, dataLon){
     }
         console.log("this is cold");
 
+        var htmlstring2 = "";
+var openPara2 = document.getElementById("name2")
+openPara2.innerHTML+=htmlstring2+=dataTemp
+
+var htmlstring3 = "";
+var openPara3 = document.getElementById("name3")
+openPara3.innerHTML+=htmlstring3+=dataHum
     }
     
