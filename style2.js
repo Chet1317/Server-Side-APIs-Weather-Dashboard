@@ -7,8 +7,23 @@ function submit(){
     var allCity = document.querySelector("#inputBox").value
     submitCity(key,allCity)
    localStorage.setItem("cities", allCity)
+   
  var clear =  document.getElementById("openPara")
+ var clear2 =document.getElementById("openPara2")
+ var clear3 =document.getElementById("openPara3")
+ var clear4 =document.getElementById("openPara4")
+ var clear5 =document.getElementById("openPara5")
  clear.innerHTML = "";
+   clear2.innerHTML = "";
+   clear3.innerHTML = "";
+   clear4.innerHTML = "";
+   clear5.innerHTML = "";
+ var clear6 = document.getElementById("openPara1")
+clear6.innerHTML="";
+var clear7 = document.getElementById("name")
+clear7.innerHTML = "";
+
+
 }
 
 async function submitCity(key,allCity){
@@ -20,13 +35,23 @@ async function submitCity(key,allCity){
         console.log(data)
         var dataLat = data.coord.lat
         var dataLon = data.coord.lon
+        var dataName = data.name
         console.log(`${dataLon} ${dataLat}`)
     submitWeather(key, dataLat, dataLon)
     currentWeather(key, dataLat, dataLon)
-    
+    getCityName(dataName)
     
     })
 } 
+
+//Get City Name
+function getCityName(dataName){
+var htmlstring1 = "";
+var getName = document.getElementById("openPara1")
+getName.innerHTML+=htmlstring1+=dataName
+console.log(dataName)
+}
+
 // Five day forecast
 async function submitWeather (key, dataLat, dataLon){
     var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${dataLat}&lon=${dataLon}&units=metric&appid=${key}`;
@@ -79,27 +104,27 @@ async function currentWeather (key, dataLat, dataLon){
     console.log(fetchData)
     var fetchJsonData = fetchData.json()
     fetchJsonData.then(function(data){
-        var dataNme = data.current.uvi
+        var dataUvi = data.current.uvi
         console.log(data)
         console.log(data.list)
-        showCurrent(dataNme)
+        showCurrent(dataUvi)
         
     })}
 
     
-     function showCurrent (dataNme){
+     function showCurrent (dataUvi){
         
         var htmlstring1 = "";
-        var openPara1 = document.getElementById("openPara1")
-    openPara1.innerHTML+=htmlstring1+=dataNme
-    console.log(dataNme)
+        var openPara1 = document.getElementById("name")
+    openPara1.innerHTML+=htmlstring1+=dataUvi
+    console.log(dataUvi)
     
-    if(dataNme > 5){
+    if(dataUvi > 5){
         console.log("this is hot")
-        document.getElementById("openPara1").style.color = "red";
+        document.getElementById("name").style.color = "red";
 
-    }else if(dataNme < 5){
-        document.getElementById("openPara1").style.color = "blue";
+    }else if(dataUvi < 5){
+        document.getElementById("name").style.color = "blue";
     }
         console.log("this is cold");
 
