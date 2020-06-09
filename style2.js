@@ -22,7 +22,10 @@ function submit(){
 clear6.innerHTML="";
 var clear7 = document.getElementById("name")
 clear7.innerHTML = "";
-
+var clear8 = document.getElementById("name2")
+clear8.innerHTML= "";
+var clear9 = document.getElementById("name3");
+clear9.innerHTML = "";
 
 }
 
