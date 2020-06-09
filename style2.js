@@ -6,7 +6,9 @@ function submit(){
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
     submitCity(key,allCity)
-   
+   localStorage.setItem("cities", allCity)
+ var clear =  document.getElementById("openPara")
+ clear.innerHTML = "";
 }
 
 async function submitCity(key,allCity){
@@ -38,7 +40,7 @@ async function submitWeather (key, dataLat, dataLon){
         console.log(data.list[0])
         
         showWeather(data)
-      
+    
     })
 }
 
@@ -56,9 +58,10 @@ async function submitWeather (key, dataLat, dataLon){
     var openPara3 = document.getElementById("openPara3")
     var openPara4 = document.getElementById("openPara4")
     var openPara5 = document.getElementById("openPara5")
+
     
     openPara.innerHTML+=htmlstring+=data.list[0].main.temp
-    
+   
     openPara2.innerHTML+=htmlstring1+=data.list[1].main.temp
    
     openPara3.innerHTML+=htmlstring2+=data.list[2].main.temp
@@ -66,8 +69,7 @@ async function submitWeather (key, dataLat, dataLon){
     openPara4.innerHTML+=htmlstring3+=data.list[3].main.temp
    
     openPara5.innerHTML+=htmlstring4+=data.list[4].main.temp
-
-
+   
     }
 
 //Current weather
@@ -100,7 +102,6 @@ async function currentWeather (key, dataLat, dataLon){
         document.getElementById("openPara1").style.color = "blue";
     }
         console.log("this is cold");
+
     }
     
-
-   
