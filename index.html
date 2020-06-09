@@ -8,19 +8,29 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <style>
+        fieldset {
+margin-bottom: 50px;
+        }
+    </style>
 
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Navbar</span>
       </nav>
-      
+
+     <div class = "container"> 
       <nav class="nav flex-column">
       <nav class="navbar navbar-light bg-light">
           <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" onclick="submit()" type="submit">Search</button>
-      
+          <button class="btn btn-outline-success my-2 my-sm-0" onclick="submit()" type="submit">Search</button>          
+        </nav>
       </nav>
-      </nav>
-      
+<fieldset>
+    <ul class="list-group">
+        <a class="nav-link" href="#" id="localValue"></a>
+    </ul>
+</fieldset>
+     </div>
 
       <div class="container">
       <div class="jumbotron jumbotron-fluid">
@@ -106,7 +116,7 @@
                         <div class="card-body text-primary">
                             <h5 class="card-title">Date</h5>
                             <p class="card-text" id="date5"></p>
-                            <h5 class="card-title">Temp</h5>
+                            <h5 class="card-title">Temp*C</h5>
                         <p class="card-text" id="openPara5">Temp</p>
                         </div>
                         </div>

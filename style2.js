@@ -5,9 +5,16 @@ function submit(){
     event.preventDefault() 
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
-    submitCity(key,allCity)
-   localStorage.setItem("cities", allCity)
-   
+    localStorage.setItem("cities", allCity)
+    
+    for(var i = 4; i< localStorage.length; i++){
+        var htmlstring="";
+    var field = document.getElementById("localValue") 
+    var localKey = localStorage.getItem("cities")
+    field.innerHTML+=htmlstring+=localKey
+console.log(localKey)
+   }
+   submitCity(key,allCity)
  var clear =  document.getElementById("openPara")
  var clear2 =document.getElementById("openPara2")
  var clear3 =document.getElementById("openPara3")
@@ -28,7 +35,22 @@ var clear9 = document.getElementById("name3");
 clear9.innerHTML = "";
 var clear10 = document.getElementById("name4")
 clear10.innerHTML = "";
+var clear11 = document.getElementById("date1")
+clear11.innerHTML="";
+var clear12 = document.getElementById("date2")
+clear12.innerHTML = "";
+var clear13 = document.getElementById("date3")
+clear13.innerHTML = "";
+var clear14 = document.getElementById("date4")
+clear14.innerHTML = "";
+var clear15 = document.getElementById("date5")
+clear15.innerHTML="";
 }
+
+
+    
+ 
+
 
 async function submitCity(key,allCity){
     var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${allCity}&appid=${key}`;
@@ -139,11 +161,11 @@ async function currentWeather (key, dataLat, dataLon){
     openPara1.innerHTML+=htmlstring1+=dataUvi
     console.log(dataUvi)
     
-    if(dataUvi > 5){
+    if(dataUvi >=6){
         console.log("this is hot")
         document.getElementById("name").style.color = "red";
 
-    }else if(dataUvi < 5){
+    }else if(dataUvi < 6){
         document.getElementById("name").style.color = "blue";
     }
         console.log("this is cold");
