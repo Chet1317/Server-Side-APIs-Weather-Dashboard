@@ -26,7 +26,8 @@ var clear8 = document.getElementById("name2")
 clear8.innerHTML= "";
 var clear9 = document.getElementById("name3");
 clear9.innerHTML = "";
-
+var clear10 = document.getElementById("name4")
+clear10.innerHTML = "";
 }
 
 async function submitCity(key,allCity){
@@ -110,14 +111,15 @@ async function currentWeather (key, dataLat, dataLon){
         var dataUvi = data.current.uvi
         var dataTemp = data.current.temp
         var dataHum = data.current.humidity
+        var dataWind = data.current.wind_speed
         console.log(data)
         console.log(data.list)
-        showCurrent(dataUvi, dataTemp, dataHum)
+        showCurrent(dataUvi, dataTemp, dataHum, dataWind)
         
     })}
 
     
-     function showCurrent (dataUvi, dataTemp, dataHum){
+     function showCurrent (dataUvi, dataTemp, dataHum, dataWind){
         
         var htmlstring1 = "";
         var openPara1 = document.getElementById("name")
@@ -140,5 +142,9 @@ openPara2.innerHTML+=htmlstring2+=dataTemp
 var htmlstring3 = "";
 var openPara3 = document.getElementById("name3")
 openPara3.innerHTML+=htmlstring3+=dataHum
+
+var htmlstring4 = "";
+var openPara4 = document.getElementById("name4")
+openPara4.innerHTML+=htmlstring4+=dataWind
     }
     
