@@ -88,16 +88,16 @@ async function submitWeather (key, dataLat, dataLon){
     var openPara4 = document.getElementById("openPara4")
     var openPara5 = document.getElementById("openPara5")
 
-    
     openPara.innerHTML+=htmlstring+=data.list[0].main.temp
-   
     openPara2.innerHTML+=htmlstring1+=data.list[1].main.temp
-   
     openPara3.innerHTML+=htmlstring2+=data.list[2].main.temp
-    
     openPara4.innerHTML+=htmlstring3+=data.list[3].main.temp
-   
     openPara5.innerHTML+=htmlstring4+=data.list[4].main.temp
+
+    var htmlstring5="";
+    var openPara6 = document.getElementById("date1")
+
+    openPara6.innerHTML+=htmlstring5+=data.list[0].dt_txt
    
     }
 
