@@ -75,7 +75,7 @@ async function submitWeather (key, dataLat, dataLon){
 
  //show Forecast objects
  function showWeather(data){
-    for (var i=1; i<=5; i++)
+    for (var i=1; i<=36; i++)
     console.log(data.list[i])
     var htmlstring = "";
     var htmlstring1 = "";
@@ -89,15 +89,28 @@ async function submitWeather (key, dataLat, dataLon){
     var openPara5 = document.getElementById("openPara5")
 
     openPara.innerHTML+=htmlstring+=data.list[0].main.temp
-    openPara2.innerHTML+=htmlstring1+=data.list[1].main.temp
-    openPara3.innerHTML+=htmlstring2+=data.list[2].main.temp
-    openPara4.innerHTML+=htmlstring3+=data.list[3].main.temp
-    openPara5.innerHTML+=htmlstring4+=data.list[4].main.temp
+    openPara2.innerHTML+=htmlstring1+=data.list[9].main.temp
+    openPara3.innerHTML+=htmlstring2+=data.list[18].main.temp
+    openPara4.innerHTML+=htmlstring3+=data.list[27].main.temp
+    openPara5.innerHTML+=htmlstring4+=data.list[36].main.temp
 
     var htmlstring5="";
-    var openPara6 = document.getElementById("date1")
+    var htmlstring6="";
+    var htmlstring7="";
+    var htmlstring8="";
+    var htmlstring9="";
 
+    var openPara6 = document.getElementById("date1")
+    var openPara7 = document.getElementById("date2")
+    var openPara8 = document.getElementById("date3")
+    var openPara9 = document.getElementById("date4")
+    var openPara10 = document.getElementById("date5")
+    
     openPara6.innerHTML+=htmlstring5+=data.list[0].dt_txt
+    openPara7.innerHTML+=htmlstring6+=data.list[9].dt_txt
+    openPara8.innerHTML+=htmlstring7+=data.list[18].dt_txt
+    openPara9.innerHTML+=htmlstring8+=data.list[27].dt_txt
+    openPara10.innerHTML+=htmlstring9+=data.list[36].dt_txt
    
     }
 
