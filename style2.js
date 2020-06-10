@@ -15,7 +15,7 @@ function submit(){
     field.innerHTML+=htmlstring+=localKey
 console.log(localKey)
    }
-   
+
    submitCity(key,allCity)
  var clear =  document.getElementById("openPara")
  var clear2 =document.getElementById("openPara2")
@@ -47,6 +47,19 @@ var clear14 = document.getElementById("date4")
 clear14.innerHTML = "";
 var clear15 = document.getElementById("date5")
 clear15.innerHTML="";
+var clear16 = document.getElementById("hum1")
+clear16.innerHTML="";
+var clear17 = document.getElementById("hum2")
+clear17.innerHTML="";
+var clear18 = document.getElementById("hum3")
+clear18.innerHTML="";
+var clear19 = document.getElementById("hum4")
+clear19.innerHTML="";
+var clear20 = document.getElementById("hum5")
+clear20.innerHTML="";
+
+
+
 }
 
 
@@ -135,8 +148,56 @@ async function submitWeather (key, dataLat, dataLon){
     openPara8.innerHTML+=htmlstring7+=data.list[18].dt_txt
     openPara9.innerHTML+=htmlstring8+=data.list[27].dt_txt
     openPara10.innerHTML+=htmlstring9+=data.list[36].dt_txt
+
+    var htmlstring10 = "";
+    var htmlstring11 = "";
+    var htmlstring12 = "";
+    var htmlstring13 = "";
+    var htmlstring14 = "";
+
+    var openPara11 = document.getElementById("hum1")
+    var openPara12 = document.getElementById("hum2")
+    var openPara13 = document.getElementById("hum3")
+    var openPara14 = document.getElementById("hum4")
+    var openPara15 = document.getElementById("hum5")
+
+    openPara11.innerHTML+=htmlstring10+=data.list[0].main.humidity
+    openPara12.innerHTML+=htmlstring11+=data.list[9].main.humidity
+    openPara13.innerHTML+=htmlstring12+=data.list[18].main.humidity
+    openPara14.innerHTML+=htmlstring13+=data.list[27].main.humidity
+    openPara15.innerHTML+=htmlstring14+=data.list[36].main.humidity
+    
    
-    }
+   if(data.list[0].rain){
+       document.getElementById("card-body").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+   }else{
+       document.getElementById("card-body").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+   }
+   if(data.list[9].rain){
+    document.getElementById("card-body1").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+}else{
+    document.getElementById("card-body1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+}
+if(data.list[18].rain){
+    document.getElementById("card-body2").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+}else{
+    document.getElementById("card-body2").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+}
+if(data.list[27].rain){
+    document.getElementById("card-body3").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+}else{
+    document.getElementById("card-body3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+}
+if(data.list[36].rain){
+    document.getElementById("card-body4").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+}else{
+    document.getElementById("card-body4").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+}
+
+}
+
+
+
 
 //Current weather
 async function currentWeather (key, dataLat, dataLon){
