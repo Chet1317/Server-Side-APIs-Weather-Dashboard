@@ -1,76 +1,60 @@
 
-
-
 function submit(){
     event.preventDefault() 
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
     
-    var mylist=[allCity]
-  
-    localStorage.setItem("cities", JSON.stringify(mylist))
-    
+    localStorage.setItem("cities", allCity)
     
     for(var i = 4; i< localStorage.length; i++){
-       
-       
     var field = document.getElementById("localValue")
     var localKey = localStorage.getItem("cities")
     field.innerHTML+=localKey
-console.log(localKey)
+    console.log(localKey)
     }
 
-
-   submitCity(key,allCity)
- var clear =  document.getElementById("openPara")
- var clear2 =document.getElementById("openPara2")
- var clear3 =document.getElementById("openPara3")
- var clear4 =document.getElementById("openPara4")
- var clear5 =document.getElementById("openPara5")
- clear.innerHTML = "";
-   clear2.innerHTML = "";
-   clear3.innerHTML = "";
-   clear4.innerHTML = "";
-   clear5.innerHTML = "";
- var clear6 = document.getElementById("openPara1")
-clear6.innerHTML="";
-var clear7 = document.getElementById("name")
-clear7.innerHTML = "";
-var clear8 = document.getElementById("name2")
-clear8.innerHTML= "";
-var clear9 = document.getElementById("name3");
-clear9.innerHTML = "";
-var clear10 = document.getElementById("name4")
-clear10.innerHTML = "";
-var clear11 = document.getElementById("date1")
-clear11.innerHTML="";
-var clear12 = document.getElementById("date2")
-clear12.innerHTML = "";
-var clear13 = document.getElementById("date3")
-clear13.innerHTML = "";
-var clear14 = document.getElementById("date4")
-clear14.innerHTML = "";
-var clear15 = document.getElementById("date5")
-clear15.innerHTML="";
-var clear16 = document.getElementById("hum1")
-clear16.innerHTML="";
-var clear17 = document.getElementById("hum2")
-clear17.innerHTML="";
-var clear18 = document.getElementById("hum3")
-clear18.innerHTML="";
-var clear19 = document.getElementById("hum4")
-clear19.innerHTML="";
-var clear20 = document.getElementById("hum5")
-clear20.innerHTML="";
-
-
-
+submitCity(key,allCity)
+    var clear =  document.getElementById("openPara")
+    var clear2 =document.getElementById("openPara2")
+    var clear3 =document.getElementById("openPara3")
+    var clear4 =document.getElementById("openPara4")
+    var clear5 =document.getElementById("openPara5")
+    clear.innerHTML = "";
+    clear2.innerHTML = "";
+    clear3.innerHTML = "";
+    clear4.innerHTML = "";
+    clear5.innerHTML = "";
+    var clear6 = document.getElementById("openPara1")
+    clear6.innerHTML="";
+    var clear7 = document.getElementById("name")
+    clear7.innerHTML = "";
+    var clear8 = document.getElementById("name2")
+    clear8.innerHTML= "";
+    var clear9 = document.getElementById("name3");
+    clear9.innerHTML = "";
+    var clear10 = document.getElementById("name4")
+    clear10.innerHTML = "";
+    var clear11 = document.getElementById("date1")
+    clear11.innerHTML="";
+    var clear12 = document.getElementById("date2")
+    clear12.innerHTML = "";
+    var clear13 = document.getElementById("date3")
+    clear13.innerHTML = "";
+    var clear14 = document.getElementById("date4")
+    clear14.innerHTML = "";
+    var clear15 = document.getElementById("date5")
+    clear15.innerHTML="";
+    var clear16 = document.getElementById("hum1")
+    clear16.innerHTML="";
+    var clear17 = document.getElementById("hum2")
+    clear17.innerHTML="";
+    var clear18 = document.getElementById("hum3")
+    clear18.innerHTML="";
+    var clear19 = document.getElementById("hum4")
+    clear19.innerHTML="";
+    var clear20 = document.getElementById("hum5")
+    clear20.innerHTML="";
 }
-
-
-    
- 
-
 
 async function submitCity(key,allCity){
     var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${allCity}&appid=${key}`;
@@ -78,17 +62,15 @@ async function submitCity(key,allCity){
     console.log(fetchData)
     const fetchJsonData = fetchData.json()
     fetchJsonData.then(function(data){
-        console.log(data)
-        var dataLat = data.coord.lat
-        var dataLon = data.coord.lon
-        var dataName = data.name
-        console.log(`${dataLon} ${dataLat}`)
+    console.log(data)
+    var dataLat = data.coord.lat
+    var dataLon = data.coord.lon
+    var dataName = data.name
+    console.log(`${dataLon} ${dataLat}`)
     submitWeather(key, dataLat, dataLon)
     currentWeather(key, dataLat, dataLon)
     getCityName(dataName)
-    
-    })
-} 
+})} 
 
 //Get City Name
 function getCityName(dataName){
@@ -106,17 +88,15 @@ async function submitWeather (key, dataLat, dataLon){
     var fetchJsonData = fetchData.json()
     fetchJsonData.then(function(data){
     
-        console.log(data)
-        console.log(data.list)
-        console.log(data.list[0])
+    console.log(data)
+    console.log(data.list)
+    console.log(data.list[0])
         
-        showWeather(data)
-    
-    })
-}
+    showWeather(data)
+})}
 
  //show Forecast objects
- function showWeather(data){
+function showWeather(data){
     for (var i=1; i<=36; i++)
     console.log(data.list[i])
     var htmlstring = "";
@@ -173,36 +153,31 @@ async function submitWeather (key, dataLat, dataLon){
     openPara15.innerHTML+=htmlstring14+=data.list[36].main.humidity
     
    
-   if(data.list[0].rain){
+    if(data.list[0].rain){
        document.getElementById("card-body").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
-   }else{
+    }else{
        document.getElementById("card-body").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
-   }
-   if(data.list[9].rain){
+    }
+    if(data.list[9].rain){
     document.getElementById("card-body1").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
-}else{
+    }else{
     document.getElementById("card-body1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
-}
-if(data.list[18].rain){
+    }
+    if(data.list[18].rain){
     document.getElementById("card-body2").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
-}else{
+    }else{
     document.getElementById("card-body2").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
-}
-if(data.list[27].rain){
+    }
+    if(data.list[27].rain){
     document.getElementById("card-body3").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
-}else{
+    }else{
     document.getElementById("card-body3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
-}
-if(data.list[36].rain){
+    }
+    if(data.list[36].rain){
     document.getElementById("card-body4").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
-}else{
+    }else{
     document.getElementById("card-body4").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
-}
-
-}
-
-
-
+}}
 
 //Current weather
 async function currentWeather (key, dataLat, dataLon){
@@ -221,33 +196,31 @@ async function currentWeather (key, dataLat, dataLon){
         
     })}
 
-    
-     function showCurrent (dataUvi, dataTemp, dataHum, dataWind){
-        
-        var htmlstring1 = "";
-        var openPara1 = document.getElementById("name")
+function showCurrent (dataUvi, dataTemp, dataHum, dataWind){
+    var htmlstring1 = "";
+    var openPara1 = document.getElementById("name")
     openPara1.innerHTML+=htmlstring1+=dataUvi
     console.log(dataUvi)
     
     if(dataUvi >=6){
-        console.log("this is hot")
-        document.getElementById("name").style.color = "red";
+    console.log("this is hot")
+    document.getElementById("name").style.color = "red";
 
     }else if(dataUvi < 6){
-        document.getElementById("name").style.color = "blue";
+    document.getElementById("name").style.color = "blue";
     }
-        console.log("this is cold");
+    console.log("this is cold");
 
-        var htmlstring2 = "";
-var openPara2 = document.getElementById("name2")
-openPara2.innerHTML+=htmlstring2+=dataTemp
+    var htmlstring2 = "";
+    var openPara2 = document.getElementById("name2")
+    openPara2.innerHTML+=htmlstring2+=dataTemp
 
-var htmlstring3 = "";
-var openPara3 = document.getElementById("name3")
-openPara3.innerHTML+=htmlstring3+=dataHum
+    var htmlstring3 = "";
+    var openPara3 = document.getElementById("name3")
+    openPara3.innerHTML+=htmlstring3+=dataHum
 
-var htmlstring4 = "";
-var openPara4 = document.getElementById("name4")
-openPara4.innerHTML+=htmlstring4+=dataWind
-    }
+    var htmlstring4 = "";
+    var openPara4 = document.getElementById("name4")
+    openPara4.innerHTML+=htmlstring4+=dataWind
+}
     
