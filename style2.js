@@ -5,6 +5,7 @@ function submit(){
     event.preventDefault() 
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
+    
     localStorage.setItem("cities", allCity)
     
     for(var i = 4; i< localStorage.length; i++){
@@ -14,6 +15,7 @@ function submit(){
     field.innerHTML+=htmlstring+=localKey
 console.log(localKey)
    }
+   
    submitCity(key,allCity)
  var clear =  document.getElementById("openPara")
  var clear2 =document.getElementById("openPara2")

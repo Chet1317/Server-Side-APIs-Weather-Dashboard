@@ -1,0 +1,35 @@
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: -webkit-xxx-large;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(220, 211, 211, 0.9);
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 2rem;
+}
+
+.bg-light {
+    background-color: #10123c!important;
+}
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/260/732/original/vector-sunny-sky-spring-background.jpg);
+}
