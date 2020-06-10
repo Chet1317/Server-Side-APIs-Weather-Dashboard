@@ -6,15 +6,20 @@ function submit(){
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
     
-    localStorage.setItem("cities", allCity)
+    var mylist=[allCity]
+  
+    localStorage.setItem("cities", JSON.stringify(mylist))
+    
     
     for(var i = 4; i< localStorage.length; i++){
-        var htmlstring="";
-    var field = document.getElementById("localValue") 
+       
+       
+    var field = document.getElementById("localValue")
     var localKey = localStorage.getItem("cities")
-    field.innerHTML+=htmlstring+=localKey
+    field.innerHTML+=localKey
 console.log(localKey)
-   }
+    }
+
 
    submitCity(key,allCity)
  var clear =  document.getElementById("openPara")
