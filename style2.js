@@ -193,8 +193,7 @@ async function currentWeather (key, dataLat, dataLon){
         console.log(data)
         console.log(data.list)
         showCurrent(dataUvi, dataTemp, dataHum, dataWind)
-        
-    })}
+})}
 
 function showCurrent (dataUvi, dataTemp, dataHum, dataWind){
     var htmlstring1 = "";
