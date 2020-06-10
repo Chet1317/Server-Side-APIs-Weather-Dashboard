@@ -10,125 +10,102 @@
 <body>
     <style>
         fieldset {
-margin-bottom: 50px;
+            margin-bottom: 50px;
         }
     </style>
-
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-      </nav>
-
-     <div class = "container"> 
-      <nav class="nav flex-column">
-      <nav class="navbar navbar-light bg-light">
-          <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>          
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </nav>
-      </nav>
-<fieldset>
-    <ul class="list-group">
-        <li class="nav-link" href="#" id="localValue"></li>
-    </ul>
-</fieldset>
-     </div>
-
-      <div class="container">
-      <div class="jumbotron jumbotron-fluid">
-          <h1 class="display-4" id="openPara1"></h1>
-          <h3>UVI:</h3>
-          <p class="lead" id="name"></p>
-          <h3>Temperature:</h3>
-          <p class="lead" id="name2"></p>
-          <h3>Humidity</h3>
-          <p class="lead" id="name3"></p>
-          <h3>Wind Speed</h3>
-          <p class="lead" id="name4"></p>
+            <div class = "container"> 
+                <nav class="nav flex-column">
+                <nav class="navbar navbar-light bg-light">
+                <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>          
+            </nav>
+        </nav>
+            <fieldset>
+                <ul class="list-group">
+                <li class="nav-link" href="#" id="localValue"></li>
+                </ul>
+            </fieldset>
         </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-        <div class="col">
-    <div class="card border-primary mb-3" style="max-width: 18rem;">
-        <div class="card-body text-dark" id="card-body">
-            <h5 class="card-title">Date & Time</h5>
-        <p class="card-text" id="date1"></p>
-        <h5 class="card-title">Temp*C</h5>
-        <p class="card-text" id="openPara"></p>
-        <h5 class="card-title">Humidity</h5>
-        <p class="card-text" id="hum1"></p>
-        </div>
-    </div>
-    </div>
-
-   
-
-        
-             <div class="col">
-        <div class="card border-primary mb-3" style="max-width: 18rem;">
-            <div class="card-body text-dark" id="card-body1">
-                <h5 class="card-title">Date & Time</h5>
-                <p class="card-text" id="date2"></p>
-                <h5 class="card-title">Temp*C</h5>
-                <p class="card-text" id="openPara2"></p>
-                <h5 class="card-title">Humidity</h5>
-        <p class="card-text" id="hum2"></p>
-              </div>
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <h1 class="display-4" id="openPara1"></h1>
+                    <h3>UVI:</h3>
+                    <p class="lead" id="name"></p>
+                    <h3>Temperature:</h3>
+                    <p class="lead" id="name2"></p>
+                    <h3>Humidity</h3>
+                    <p class="lead" id="name3"></p>
+                    <h3>Wind Speed</h3>
+                    <p class="lead" id="name4"></p>
+                </div>
             </div>
-         </div>
-        
-
-         
+    <div class="container">
+        <div class="row">
             <div class="col">
-            <div class="card border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-body text-dark" id="card-body2">
-                    <h5 class="card-title">Date & Time</h5>
-                    <p class="card-text" id="date3"></p>
-                    <h5 class="card-title">Temp*C</h5>
-                    <p class="card-text" id="openPara3"></p>
-                    <h5 class="card-title">Humidity</h5>
-        <p class="card-text" id="hum3"></p>
-                    </div>
-                </div>
-                </div>
-            
-               
-               
-
-                    <div class="col">
-            <div class="card border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-body text-dark" id="card-body3">
-                    <h5 class="card-title">Date & Time</h5>
-                    <p class="card-text" id="date4"></p>
-                    <h5 class="card-title">Temp*C</h5>
-                    <p class="card-text" id="openPara4"></p>
-                    <h5 class="card-title">Humidity</h5>
-        <p class="card-text" id="hum4"></p>
-                    </div>
-                </div>
-                    </div>
-             
-                
-              
-
-                    <div class="col">
-                    <div class="card border-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-body text-dark" id="card-body4">
-                            <h5 class="card-title">Date & Time</h5>
-                            <p class="card-text" id="date5"></p>
-                            <h5 class="card-title">Temp*C</h5>
-                        <p class="card-text" id="openPara5"></p>
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-body text-dark" id="card-body">
+                        <h5 class="card-title">Date & Time</h5>
+                        <p class="card-text" id="date1"></p>
+                        <h5 class="card-title">Temp*C</h5>
+                        <p class="card-text" id="openPara"></p>
                         <h5 class="card-title">Humidity</h5>
-        <p class="card-text" id="hum5"></p>
-                        </div>
-                        </div>
-                  </div>
-                      </div>
+                        <p class="card-text" id="hum1"></p>
+                    </div>
                 </div>
-
-
-        
-
+            </div>
+                <div class="col">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-body text-dark" id="card-body1">
+                            <h5 class="card-title">Date & Time</h5>
+                            <p class="card-text" id="date2"></p>
+                            <h5 class="card-title">Temp*C</h5>
+                            <p class="card-text" id="openPara2"></p>
+                            <h5 class="card-title">Humidity</h5>
+                            <p class="card-text" id="hum2"></p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-body text-dark" id="card-body2">
+                        <h5 class="card-title">Date & Time</h5>
+                        <p class="card-text" id="date3"></p>
+                        <h5 class="card-title">Temp*C</h5>
+                        <p class="card-text" id="openPara3"></p>
+                        <h5 class="card-title">Humidity</h5>
+                        <p class="card-text" id="hum3"></p>
+                    </div>
+                </div>
+            </div>
+                <div class="col">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-body text-dark" id="card-body3">
+                            <h5 class="card-title">Date & Time</h5>
+                            <p class="card-text" id="date4"></p>
+                            <h5 class="card-title">Temp*C</h5>
+                            <p class="card-text" id="openPara4"></p>
+                            <h5 class="card-title">Humidity</h5>
+                            <p class="card-text" id="hum4"></p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col">
+                        <div class="card border-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-body text-dark" id="card-body4">
+                                <h5 class="card-title">Date & Time</h5>
+                                <p class="card-text" id="date5"></p>
+                                <h5 class="card-title">Temp*C</h5>
+                                <p class="card-text" id="openPara5"></p>
+                                <h5 class="card-title">Humidity</h5>
+                                <p class="card-text" id="hum5"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     <script src="style2.js"></script>
 </body>
