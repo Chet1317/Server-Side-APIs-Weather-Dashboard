@@ -11,7 +11,7 @@ function submit(){
     for(var i = 4; i< localStorage.length; i++){
     var field = document.getElementById("localValue")
     var localKey = localStorage.getItem("cities")
-    field.innerHTML+=localKey
+    // field.innerHTML+=localKey
     console.log(localKey)
     }
 
@@ -156,29 +156,29 @@ function showWeather(data){
     
    
     if(data.list[0].rain){
-       document.getElementById("card-body").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+       document.getElementById("card-body").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
     }else{
-       document.getElementById("card-body").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+       document.getElementById("card-body").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[9].rain){
-    document.getElementById("card-body1").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+    document.getElementById("card-body1").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
     }else{
-    document.getElementById("card-body1").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+    document.getElementById("card-body1").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[18].rain){
-    document.getElementById("card-body2").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+    document.getElementById("card-body2").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
     }else{
-    document.getElementById("card-body2").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+    document.getElementById("card-body2").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[27].rain){
-    document.getElementById("card-body3").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+    document.getElementById("card-body3").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
     }else{
-    document.getElementById("card-body3").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+    document.getElementById("card-body3").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[36].rain){
-    document.getElementById("card-body4").style.backgroundImage = "url('https://p7.hiclipart.com/preview/868/92/898/rain-cloud-storm-weather-clip-art-rain-thumbnail.jpg')"
+    document.getElementById("card-body4").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
     }else{
-    document.getElementById("card-body4").style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRilkk1OFjxRdnXOqW7XgyeTWId5RJ4-GMHF6N6GFolW6b-4IBx&usqp=CAU')"
+    document.getElementById("card-body4").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
 }}
 
 //Current weather

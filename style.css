@@ -9,7 +9,7 @@
 }
 
 .navbar-light .navbar-brand {
-    color: rgba(220, 211, 211, 0.9);
+    color: rgba(251, 255, 0, 0.9);
     font-family: cursive;
     text-align: center;
 }
@@ -26,14 +26,14 @@
 }
 
 .bg-light {
-    background-color: #10123c!important;
+    background-color: #1014fd!important;
 }
 
 .jumbotron-fluid {
     padding-right: 0;
     padding-left: 0;
     border-radius: 0;
-    background-image: url("https://t3.ftcdn.net/jpg/02/69/94/16/240_F_269941600_Rlk1cBaVSdp4b2iCG2I7z28pkFp5JzDa.jpg");
+    background-image: url("https://ak.picdn.net/shutterstock/videos/1034569973/thumb/1.jpg?ip=x480");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -44,6 +44,7 @@
         font-weight: 300;
         line-height: 1.2;
         text-align: center;
+        margin-top: -2rem;
 
 }
 
@@ -53,10 +54,14 @@
     line-height: 1.2;
     text-align: center;
     font-size: inherit;
+    color: rgb(0, 0, 0);
 }
 
 .lead {
-    font-size: .75rem;
+    font-size: 1rem;
     font-weight: 300;
     text-align: center;
+    max-height: 1rem;
+    margin-bottom: 0;
+    color: rgb(0, 0, 0);
 }
