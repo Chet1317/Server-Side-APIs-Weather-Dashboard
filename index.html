@@ -12,15 +12,24 @@
         fieldset {
             margin-bottom: 50px;
         }
+        .jumbotron{
+            margin-top: 1rem;
+        }
+        body{
+            background-color: rgb(172, 172, 255);
+        }
     </style>
         <nav class="navbar navbar-light bg-light">
             <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </nav>
             <div class = "container"> 
+                <div class ="row">
+                <div class="col-xs-3">
                 <nav class="nav flex-column">
                 <nav class="navbar navbar-light bg-light">
                 <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>          
+                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>  
+            </div>        
             </nav>
         </nav>
             <fieldset>
@@ -28,8 +37,7 @@
                 <li class="nav-link" href="#" id="localValue"></li>
                 </ul>
             </fieldset>
-        </div>
-            <div class="container">
+            <div class="col">
                 <div class="jumbotron jumbotron-fluid">
                     <h1 class="display-4" id="openPara1"></h1>
                     <h3>UVI:</h3>
@@ -42,6 +50,9 @@
                     <p class="lead" id="name4"></p>
                 </div>
             </div>
+            </div>
+        </div>
+            
     <div class="container">
         <div class="row">
             <div class="col">

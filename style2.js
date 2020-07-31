@@ -5,7 +5,9 @@ function submit(){
     var allCity = document.querySelector("#inputBox").value
     
     localStorage.setItem("cities", allCity)
-    
+     
+ 
+
     for(var i = 4; i< localStorage.length; i++){
     var field = document.getElementById("localValue")
     var localKey = localStorage.getItem("cities")
