@@ -156,27 +156,27 @@ function showWeather(data){
     
    
     if(data.list[0].rain){
-       document.getElementById("card-body").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
+       document.getElementById("card-body").style.backgroundImage = "url('https://i.dlpng.com/static/png/6930223_preview.png')"
     }else{
        document.getElementById("card-body").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[9].rain){
-    document.getElementById("card-body1").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
+    document.getElementById("card-body1").style.backgroundImage = "url('https://i.dlpng.com/static/png/6930223_preview.png')"
     }else{
     document.getElementById("card-body1").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[18].rain){
-    document.getElementById("card-body2").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
+    document.getElementById("card-body2").style.backgroundImage = "url('https://i.dlpng.com/static/png/6930223_preview.png')"
     }else{
     document.getElementById("card-body2").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[27].rain){
-    document.getElementById("card-body3").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
+    document.getElementById("card-body3").style.backgroundImage = "url('https://i.dlpng.com/static/png/6930223_preview.png')"
     }else{
     document.getElementById("card-body3").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
     }
     if(data.list[36].rain){
-    document.getElementById("card-body4").style.backgroundImage = "url('https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/cloud-with-rain.png')"
+    document.getElementById("card-body4").style.backgroundImage = "url('https://i.dlpng.com/static/png/6930223_preview.png')"
     }else{
     document.getElementById("card-body4").style.backgroundImage = "url('https://sdds4.intermaps.com/web_template_net_settings/icons/wetter_256_color_yrnrk/01d.png')"
 }}
