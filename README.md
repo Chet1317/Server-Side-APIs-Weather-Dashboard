@@ -6,4 +6,5 @@ the Dashboard show's the current weather including; uvi, humidity, temperature a
 
 # App
 
-https://user-images.githubusercontent.com/63617922/89427559-5c36e380-d709-11ea-92d7-e2f94de246a1.png
+![image](https://user-images.githubusercontent.com/63617922/89427559-5c36e380-d709-11ea-92d7-e2f94de246a1.png)
+
