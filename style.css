@@ -9,7 +9,7 @@
 }
 
 .navbar-light .navbar-brand {
-    color: rgba(251, 255, 0, 0.9);
+    color: rgb(251 255 0);
     font-family: cursive;
     text-align: center;
 }
@@ -26,16 +26,18 @@
 }
 
 .bg-light {
-    background-color: #4044ffab!important;
+    background-color: #f1f1f1d4!important;
 }
 
 .jumbotron-fluid {
     padding-right: 0;
     padding-left: 0;
     border-radius: 0;
-    background-image: url("https://ak.picdn.net/shutterstock/videos/1034569973/thumb/1.jpg?ip=x480");
+    background-color: #c0c0c085;
+    /* background-image: url("https://openweathermap.org/themes/openweathermap/assets/img/shutterstock_298797602_1.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
+   
 }
 
 .display-4 {
@@ -64,4 +66,10 @@
     max-height: 1rem;
     margin-bottom: 0;
     color: rgb(0, 0, 0);
+}
+
+body{
+    background-image: url("https://openweathermap.org/themes/openweathermap/assets/img/shutterstock_298797602_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
