@@ -37,7 +37,7 @@
     /* background-image: url("https://openweathermap.org/themes/openweathermap/assets/img/shutterstock_298797602_1.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-   
+   height: 252px;
 }
 
 .display-4 {
@@ -78,4 +78,16 @@ p {
     margin-top: 0;
     margin-bottom: 1rem;
     text-align: center;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.border-primary {
+    border-color: #ff0000a3!important;
 }
