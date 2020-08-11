@@ -73,3 +73,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+element.style {
+    color: rgb(14, 18, 20);
+    background-color: #f5deb3b8;
+}

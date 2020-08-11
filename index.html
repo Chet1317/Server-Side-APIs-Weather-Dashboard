@@ -21,25 +21,29 @@
        .card{
         background-color: #f4ff0087;
        }
+       
+
     </style>
         <nav class="navbar bg-light">
             <span style=" color: red; font-family: cursive; text-align: center; font-size: x-large;" class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </nav>
             <div class = "container"> 
                 <div class ="row">
-                <div class="col-xs-3">
-                <nav class="nav flex-column">
-                <nav class="navbar navbar-light bg-light">
-                <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>  
-            </div>        
-            </nav>
-        </nav>
-            <fieldset>
-                <ul class="list-group">
-                <li class="nav-link" href="#" id="localValue"></li>
-                </ul>
-            </fieldset>
+                <div style="margin-top:.5rem;" class="col-xs-3">
+                <!-- <nav class="nav flex-column">
+                <nav class="navbar navbar-light bg-light"> -->
+                    <button class="btn btn-outline-danger my-2 my-sm-0" onclick="submit()" type="submit">Search</button>  
+                    <input class="form-control mr-sm-2" id="inputBox" type="search" placeholder="Search" aria-label="Search">
+                    <ul style="background-color: #f5deb39e;" class="list-group" id="searchList">
+                    
+                    </ul>
+                   
+               
+            </div>     
+       
+            <!-- </nav>
+        </nav> -->
+           
             <div class="col-md">
                 <div class="jumbotron jumbotron-fluid">
                     <h1 class="display-4" id="openPara1"></h1>
@@ -55,12 +59,13 @@
             </div>
             </div>
         </div>
+        
             
     <div class="container">
         <div class="row">
             <div class="col-xs-3">
                 <div class="card border-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body text-dark" id="card-body">
+                    <div style="padding: 2px;" class="card-body text-dark" id="card-body">
                         <h5 class="card-title">Date & Time</h5>
                         <p class="card-text" id="date1"></p>
                         <h5 class="card-title">Temp*C</h5>
@@ -72,7 +77,7 @@
             </div>
                 <div class="col-xs-3">
                     <div class="card border-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-body text-dark" id="card-body1">
+                        <div style="padding: 2px;"  class="card-body text-dark" id="card-body1">
                             <h5 class="card-title">Date & Time</h5>
                             <p class="card-text" id="date2"></p>
                             <h5 class="card-title">Temp*C</h5>
@@ -84,7 +89,7 @@
                 </div>
             <div class="col-xs-3">
                 <div class="card border-primary mb-3" style="max-width: 18rem;">
-                    <div class="card-body text-dark" id="card-body2">
+                    <div style="padding: 2px;"  class="card-body text-dark" id="card-body2">
                         <h5 class="card-title">Date & Time</h5>
                         <p class="card-text" id="date3"></p>
                         <h5 class="card-title">Temp*C</h5>
@@ -96,7 +101,7 @@
             </div>
                 <div class="col-xs-3">
                     <div class="card border-primary mb-3" style="max-width: 18rem;">
-                        <div class="card-body text-dark" id="card-body3">
+                        <div style="padding: 2px;"  class="card-body text-dark" id="card-body3">
                             <h5 class="card-title">Date & Time</h5>
                             <p class="card-text" id="date4"></p>
                             <h5 class="card-title">Temp*C</h5>
@@ -108,7 +113,7 @@
                 </div>
                     <div class="col-xs-3">
                         <div class="card border-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body text-dark" id="card-body4">
+                            <div style="padding: 2px;"  class="card-body text-dark" id="card-body4">
                                 <h5 class="card-title">Date & Time</h5>
                                 <p class="card-text" id="date5"></p>
                                 <h5 class="card-title">Temp*C</h5>

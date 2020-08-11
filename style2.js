@@ -1,21 +1,43 @@
 
+var cityArray=[];
+// window.onload=function(){
+//     var myStorage=localStorage.getItem("cities");
+//     var list = document.getElementById("searchList")
+    
+//     console.log(myStorage)
+//     var storageArray=JSON.parse(myStorage)
+//     cityArray=storageArray
+//     console.log(storageArray)
+//     for(var i=0;i<storageArray.length;i++){
+//         list.innerHTML+=`<li style="color: rgb(14, 18, 20);" onClick=submitCity('${storageArray[i]}') class="nav-link" href="#" id="${storageArray[i]}">${storageArray[i]}</li>` 
+//     }
+// }
+
+
 function submit(){
     event.preventDefault() 
     var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var allCity = document.querySelector("#inputBox").value
+    var list = document.getElementById("searchList")
+    list.innerHTML+=`<li style="color: rgb(14, 18, 20);" onClick=submitCity('${allCity}') class="nav-link" href="#" id="${allCity}">${allCity}</li>`
+    cityArray.push(allCity)
+    localStorage.setItem("cities", JSON.stringify(cityArray))
     
-    localStorage.setItem("cities", allCity)
-     
  
 
-    for(var i = 4; i< localStorage.length; i++){
-    var field = document.getElementById("localValue")
-    var localKey = localStorage.getItem("cities")
+    // for(var i = 4; i< localStorage.length; i++){
+    // var field = document.getElementById("localValue")
+    // var localKey = localStorage.getItem("cities")
     // field.innerHTML+=localKey
-    console.log(localKey)
-    }
+    // console.log(localKey)
+    // }
 
-submitCity(key,allCity)
+submitCity(allCity)
+    
+}
+
+async function submitCity(allCity){
+    console.log(allCity)
     var clear =  document.getElementById("openPara")
     var clear2 =document.getElementById("openPara2")
     var clear3 =document.getElementById("openPara3")
@@ -56,9 +78,7 @@ submitCity(key,allCity)
     clear19.innerHTML="";
     var clear20 = document.getElementById("hum5")
     clear20.innerHTML="";
-}
-
-async function submitCity(key,allCity){
+    var key = "94a8ffec8561a3c29ea48d78f0dd77b6";
     var weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${allCity}&appid=${key}`;
     const fetchData = await fetch(weatherUrl)
     console.log(fetchData)
