@@ -74,7 +74,8 @@ body{
     background-size: cover;
 }
 
-element.style {
-    color: rgb(14, 18, 20);
-    background-color: #f5deb3b8;
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
 }
