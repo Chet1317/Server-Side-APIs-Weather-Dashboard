@@ -6,6 +6,8 @@ the Dashboard show's the current weather including; uvi, humidity, temperature a
 
 # App
 https://chet1317.github.io/Server-Side-APIs-Weather-Dashboard/
-![image](https://user-images.githubusercontent.com/63617922/89438354-bbe7bb80-d716-11ea-8b39-7a6a14bf60ec.png)
+
+![image](https://user-images.githubusercontent.com/63617922/89857163-5443cd00-db69-11ea-9621-c36935932fe3.png)
+
 
 
