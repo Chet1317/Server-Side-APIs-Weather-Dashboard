@@ -1,17 +1,17 @@
 
 var cityArray=[];
-// window.onload=function(){
-//     var myStorage=localStorage.getItem("cities");
-//     var list = document.getElementById("searchList")
+window.onload=function(){
+    var myStorage=localStorage.getItem("cities");
+    var list = document.getElementById("searchList")
     
-//     console.log(myStorage)
-//     var storageArray=JSON.parse(myStorage)
-//     cityArray=storageArray
-//     console.log(storageArray)
-//     for(var i=0;i<storageArray.length;i++){
-//         list.innerHTML+=`<li style="color: rgb(14, 18, 20);" onClick=submitCity('${storageArray[i]}') class="nav-link" href="#" id="${storageArray[i]}">${storageArray[i]}</li>` 
-//     }
-// }
+    console.log(myStorage)
+    var storageArray=JSON.parse(myStorage)
+    cityArray=storageArray
+    console.log(storageArray)
+    for(var i=0;i<storageArray.length;i++){
+        list.innerHTML+=`<li style="color: rgb(14, 18, 20);" onClick=submitCity('${storageArray[i]}') class="nav-link" href="#" id="${storageArray[i]}">${storageArray[i]}</li>` 
+    }
+}
 
 
 function submit(){
